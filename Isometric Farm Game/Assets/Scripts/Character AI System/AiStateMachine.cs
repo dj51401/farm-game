@@ -6,12 +6,16 @@ using UnityEngine.Tilemaps;
 
 public class AiStateMachine : BaseSM
 {
-    public Tilemap tilemap;
+    public Tilemap groundTilemap;
+    public Tilemap objectsTilemap;
     public Tile dirtTile;
+    public Tile grassTile;
+    public Tile treeTile;
 
     public WalkingState walkingState;
     public IdleState idleState;
     public DigState digState;
+    public ChoppingState choppingState;
 
 
     public Vector3 currentTarget;
@@ -25,6 +29,7 @@ public class AiStateMachine : BaseSM
         walkingState = new WalkingState("Walking State", this);
         idleState = new IdleState("Idle State", this);
         digState = new DigState("Dig State", this);
+        choppingState = new ChoppingState("Chopping State", this);
         ai = GetComponent<IAstarAI>();
         currentState = idleState;
     }
@@ -32,8 +37,8 @@ public class AiStateMachine : BaseSM
     public void ChangeTile(Vector3Int tilePosition)
     {
         tilePosition.z = 0;
-        tilemap.SetTile(tilePosition, dirtTile);
-        tilemap.RefreshAllTiles();
+        groundTilemap.SetTile(tilePosition, dirtTile);
+        groundTilemap.RefreshAllTiles();
     }
 
 

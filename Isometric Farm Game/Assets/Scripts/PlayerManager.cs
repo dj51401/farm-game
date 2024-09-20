@@ -45,6 +45,8 @@ public class PlayerManager : MonoBehaviour
     
     public Vector3Int GetGridPosition(Vector3 gridPosition)
     {
-        return tilemap.WorldToCell(gridPosition);
+        Vector3Int v = tilemap.WorldToCell(gridPosition);
+        v.z = 0;
+        return v;
     }
 }
