@@ -6,7 +6,7 @@ public class BaseSM : MonoBehaviour
 {
     public BaseState currentState;
 
-    private void Start()
+    void Start()
     {
         if(currentState != null)
         {
@@ -14,7 +14,7 @@ public class BaseSM : MonoBehaviour
         }
     }
 
-    private void Update()
+    void Update()
     {
         if (currentState != null)
         {
@@ -22,7 +22,7 @@ public class BaseSM : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         if (currentState != null)
         {

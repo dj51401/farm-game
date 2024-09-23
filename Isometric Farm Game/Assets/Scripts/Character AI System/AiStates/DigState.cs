@@ -13,7 +13,6 @@ public class DigState : BaseState
     }
     public override void EnterState()
     {
-        Debug.Log(aiStateMachine.playerManager.targets.Peek());
 
     }
     public override void PhysicsUpdateState()
@@ -26,7 +25,7 @@ public class DigState : BaseState
         if(time > timer)
         {
             time = 0;
-            aiStateMachine.ChangeTile(aiStateMachine.playerManager.GetGridPosition(aiStateMachine.currentTarget));
+            aiStateMachine.ChangeTile(aiStateMachine.GetGridPosition(aiStateMachine.currentTarget));
 
             aiStateMachine.ChangeState(aiStateMachine.idleState);
         }

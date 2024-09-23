@@ -22,7 +22,6 @@ public class WalkingState : BaseState
     }
     public override void UpdateState()
     {
-        base.UpdateState();
         CheckDestination();
     }
 
@@ -32,10 +31,9 @@ public class WalkingState : BaseState
     }
     private void CheckDestination()
     {
-        Vector3Int gridPosition = aiStateMachine.playerManager.GetGridPosition(aiStateMachine.currentTarget);
+        Vector3Int gridPosition = aiStateMachine.GetGridPosition(aiStateMachine.currentTarget);
         gridPosition.z = 0;
 
-        Debug.Log(aiStateMachine.objectsTilemap.GetTile(gridPosition));
 
         if(aiStateMachine.ai.remainingDistance <= .2f)
         {

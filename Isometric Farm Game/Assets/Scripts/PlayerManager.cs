@@ -1,52 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
 public class PlayerManager : MonoBehaviour
 {
-    public Tilemap tilemap;
     public Vector3 mousePosition;
-    public Vector3 worldPosition;
-    public Vector3Int gridPosition;
-    public Queue<Vector3> targets;
+
+    public InputActionAsset actions;
+    public InputAction pointAction;
+    public InputAction selectAction;
+
+    private void OnEnable()
+    {
+        actions.FindActionMap("Gameplay").Enable();
+    }
+    private void OnDisable()
+    {
+        actions.FindActionMap("Gameplay").Disable();
+    }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        targets = new Queue<Vector3>();
+        pointAction = actions.FindActionMap("Gameplay").FindAction("Point");
+        selectAction = actions.FindActionMap("Gameplay").FindAction("Select");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (!targets.Contains(mousePosition))
-            {
-                gridPosition = tilemap.WorldToCell(mousePosition);
-                worldPosition = tilemap.CellToWorld(gridPosition);
-                targets.Enqueue(mousePosition);
-
-            }
-        }
-
+        mousePosition = Camera.main.ScreenToWorldPoint(pointAction.ReadValue<Vector2>());
 
     }
-    
-    public Vector3 GetWorldPosition(Vector3Int gridPosition)
-    {
-        return gridPosition;
-    }
-    
-    public Vector3Int GetGridPosition(Vector3 gridPosition)
-    {
-        Vector3Int v = tilemap.WorldToCell(gridPosition);
-        v.z = 0;
-        return v;
-    }
+
 }

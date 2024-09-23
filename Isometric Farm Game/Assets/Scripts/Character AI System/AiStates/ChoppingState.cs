@@ -24,7 +24,7 @@ public class ChoppingState : BaseState
         if (time > timer)
         {
             time = 0;
-            aiStateMachine.objectsTilemap.SetTile(aiStateMachine.playerManager.GetGridPosition(aiStateMachine.currentTarget), null);
+            aiStateMachine.objectsTilemap.SetTile(aiStateMachine.GetGridPosition(aiStateMachine.currentTarget), null);
             aiStateMachine.objectsTilemap.RefreshAllTiles();
 
             aiStateMachine.ChangeState(aiStateMachine.idleState);

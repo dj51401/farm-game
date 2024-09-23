@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.5171769, g: 0.5790652, b: 0.735849, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -223,7 +223,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4616,8 +4616,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4696,10 +4696,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d3197969bfc0e44bc7b140abd094c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilemap: {fileID: 122250502}
   mousePosition: {x: 0, y: 0, z: 0}
-  worldPosition: {x: 0, y: 0, z: 0}
-  gridPosition: {x: 0, y: 0, z: 0}
+  actions: {fileID: -944628639613478452, guid: 5945b7976145a27408780f7755850493, type: 3}
+  pointAction:
+    m_Name: Point
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: cc95bb79-57a1-49e0-b7cf-4a25c777aa43
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  selectAction:
+    m_Name: Select
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e940da01-509c-428c-a769-bfb2305d8b50
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &1297998190
 GameObject:
   m_ObjectHideFlags: 0
@@ -4731,7 +4747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACIn+vlJa5jeQIAAD4FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMFu4jAQ/RXk8xYlkFKyt12gtIe2qHTVSy5OPCEWjh3ZToFW/PuOnYSkrJYDct7MvHnzPMkX4dJUkFml15qzJ8WA/ByRR6NKsJpnDiQ/Rn3WAxzpTskt/4Qu+Z0zW7gk6nNeqeUK8dCVdTy/5E645FkwDtxvOsdoLXmudLliO1goYw3GcyoMYEgr62gkQl8jcnR001vET3ia3AV4+sRTHIzOeMxAWtB9atAmdmlNVi0zQcsKmNM+4I3GYRzH07t5W9UDvkzilG1FMJ7eRnE8jyLXVAnBTSuR2FPlvdhWBWhwZjBOcXQvKxhPnPYC+K6wboBh+UueG7CtWk1PS67RxIaX/FaNsyU1+0byBxW1NzLy6hrOp3/Czci5VuVD1zUMXAdb8Gz/Sk8ZNXbg9xBe9spD79uBij1NBbwXIJ/VWqtaskFtbWCyxGeraxhOtigg2/d4I7UDL8XV/+/tJhydz37640LwMvVWRg2wFco7Hrtk0HhJjyjZ74xpKRB1Mv4YeKO74XK1gXuujcVQO6d0+lJVa5dKVt41N05tF0pL8HA7SgWSCnvaII29vsKr2KDtVeSeuvepbd7GutfkqsTDfX4QXIU26nC5LlOowxOY4qW2gkvoRbvAM/q0UFI2G2a+B13VttY5zQZVu5qz76tFWDqdhbfxZJLifzrLb+Igmk/zWZhNZiyLwpT45eMSx6Ri0+hs3cFLkz25xEVzjO4rM1prWvllZ5oe1vyzVAN9XOZqm2kA+dIwdA4Z0NgE30+2Yhz92YK1XPrrJl8JESrbA0suRImfdHW0miY9S0Iq/qGsQxKy8F+ThDj4sssbDR8cDq55R3Ym579QSwMEFAAACAgAAIif62CzVoFsAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tFJKkrGZoamlkVESkEwyS9O1NDCxME4zM0w2MktJNjFMUooFqi+pLEj1S8xNhegJSCzJSMvMS8nMS9dzL8pMcQcZrRRbCwBQSwECLQAUAAAICAAAiJ/r5SWuY3kCAAA+BQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAiJ/rYLNWgWwAAAB4AAAACQAkAAAAAAAAAAAAAADGAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAH0DAAAAAA==
+    dataString: UEsDBBQAAAgIAACIn+vzZSfocgIAADkFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMFu4jAQ/RXk8xYlQGnZ2y6ltIe2qHTVSy4mnhALx45sp0Ar/n1nnISkrDYHZN7MvHnzPMkXk9qVkHpjl1aKJyOA/RywR2cK8FamBLIfgy7rAQ58a/RafkKb/C6FzymJh5xX7qVBPKaylueX3ipKnkbDiJ7xLUYrLTNji4XYwtw47zCeceUAQ9Z4otEIfQ3YgejG14gf8TS6ifD0iadZNDjhMQXtwXapUZPYptVZlU4VL0oQpL3HOxlGM3omTVUHhDKNUzYV0fAmIhGpUUq6Rh3zxzLYsC5zsEA+CMlx6qAoGo6oIge5zT1p75e/ZJkD3wi1/HgnLfpX87Lfpja14G5Xq/3gqgoe1sJqzqd/wvW0mTXFQ9s1jqiDz2W6e+XHlDvfs7oP33XK42DZnqsd3yh4z0E/m6U1lRa92srB6A7/e1tBf7J5Dumuw2upLXguLv9/ZVfx4HQK0x/mShabYOWkBtbKBMdnlAwW7+cRJYd1cQ0FoiTjj4M3vu3vVRO4l9Z5DDVzatK3MZWlVLYIrtE4lZ8bqyHAzSglaK78cYU0/vIKL2K9theRe06vUtO8ibVvyEVJgLv8KLoIrcz+fF0uN/sncPlL5ZXU0ImmwDP6NDda1xvmvgepal3ZjKe9qm0lxffVYmIznsbXs9Fog7+baXY1iya342wap6OpSCfxhoXlkxrH5GpV62zcwUvTHbnGRSNG+sAMlpaXYdmF5ful/CxMT5/UmVmnFkC/1AytQw4sNsFXUyyERH/W4L3U4brZV8KUSXcgkjNREiZdHLzlSceSsFJ+GE9IwubhQ5Iwgs+7vLLwIWFPzVuyEzv9BVBLAwQUAAAICAAAiJ/rYLNWgWwAAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0UkqSsZmhqaWRURKQTDJL07U0MLEwTjMzTDYyS0k2MUxSigWqL6ksSPVLzE2F6AlILMlIy8xLycxL13MvykxxBxmtFFsLAFBLAQItABQAAAgIAACIn+vzZSfocgIAADkFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACIn+tgs1aBbAAAAHgAAAAJACQAAAAAAAAAAAAAAL8CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAdgMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -21059,7 +21075,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21450,6 +21466,8 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 32
     m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: 4.0663e-41, g: 4.0663e-41, b: 4.0663e-41, a: 4.0663e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
